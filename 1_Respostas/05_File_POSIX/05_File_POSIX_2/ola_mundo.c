@@ -6,7 +6,7 @@
 int main()
 {
     char string[] = "Ola mundo!";
-    int fp = open("ola_mundo.txt", O_WRONLY |O_CREAT);
+    int fp = open("ola_mundo.txt", O_WRONLY |O_CREAT, 0666 );
     int i;
 
     for(i=0; string[i]; i++)
