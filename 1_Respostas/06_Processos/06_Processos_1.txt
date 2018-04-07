@@ -1,0 +1,49 @@
+1. Como se utiliza o comando `ps` para:
+
+(a) Mostrar todos os processos rodando na máquina?
+ps aux
+
+(b) Mostrar os processos de um usuário?
+ps -u [username]
+
+(c) Ordenar todos os processos de acordo com o uso da CPU?
+ps aux --sort=-pcpu
+
+(d) Mostrar a quanto tempo cada processo está rodando?
+ps -eo pid,etimes,cmd
+
+
+2. De onde vem o nome `fork()`?
+Do nome em inglês que significa "bifurcação" na tradução.
+
+3. Quais são as vantagens e desvantagens em utilizar:
+
+(a) `system()`?
+Vantagem: Permite chamadas diretas a funções do sistema assíncrona, pois cria um novo processo a partir da sua chamadas
+Desvantagem: Perde sincronia de código e gera outro processo
+
+(b) `fork()` e `exec()`?
+Vantagem: Fork permite que seja criado um novo processo a partir de um processo pai e executar trechos do exec de forma síncrona e indepente do processo pai.
+Desvantagem: Há um novo processo rodando e consumindo mais recursos que vêm do processo pai
+
+4. É possível utilizar o `exec()` sem executar o `fork()` antes?
+Não.
+
+5. Quais são as características básicas das seguintes funções:
+
+(a) `execp()`?
+
+
+(b) `execv()`?
+Parâmetros são feitos por vetor de argumentos do tipo char*
+
+(c) `exece()`?
+
+(d) `execvp()`?
+Parâmetros são feitos por vetor de argumentos do tipo char*
+
+(e) `execve()`?
+Parâmetros são feitos por vetor de argumentos do tipo char*
+
+(f) `execle()`?
+Parâmetros são uma lista de string passados um a um
