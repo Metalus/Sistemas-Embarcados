@@ -1,6 +1,6 @@
 1. Crie um programa em C que cria uma thread, e faça com que o programa principal envie os valores 1, 2, 3, 4, 5, 6, 7, 8, 9 e 10 para a thread, com intervalos de 1 segundo entre cada envio. Depois de o programa principal enviar o número 10, ele aguarda 1 segundo e termina a execução. A thread escreve na tela cada valor recebido, e quando ela receber o valor 10, ela termina a execução.
 
-'''C
+```C
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
@@ -34,7 +34,7 @@ int main(int argc, char *argv[])
 
 	return 0;
 }
-'''
+```
 
 2. Crie um programa em C que preenche o vetor `long int v[50000]` completamente com valores aleatórios (use a função `random()`), e que procura o valor máximo do vetor por dois métodos:
 
@@ -44,7 +44,7 @@ int main(int argc, char *argv[])
 
 Ao final do programa principal, compare os resultados obtidos pelos dois métodos.
 
-'''C
+```C
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
@@ -92,11 +92,11 @@ int main(int argc, char *argv[])
 	printf("Valor maximo single thread: %d\nValor maximo 4 threads: %d", max_mainThread, max_all_threads);
 	return 0;
 }
-'''
+```
 
 3. Repita o exercício anterior, mas calcule a média do vetor ao invés do valor máximo.
 
-'''C
+```C
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
@@ -142,6 +142,6 @@ int main(int argc, char *argv[])
 	printf("Media single thread: %lf\nMedia 4 threads: %lf", media_mainThread/50000, sum_all_threads/50000);
 	return 0;
 }
-'''
+```
 
 4. Repita o exercício anterior, mas calcule a variância do vetor ao invés da média.
