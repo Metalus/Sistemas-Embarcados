@@ -1,0 +1,17 @@
+﻿@page
+@model WebApplication1.Pages.CadastrarModel
+@{
+    ViewData["Title"] = "Cadastrar";
+}
+
+<h2>Cadastrar</h2>
+
+<form method="get" class="form-inline">
+    <input name="placa" class="form-control" placeholder="Placa"
+           value="@Model.Placa" />
+    <input name="cor" class="form-control" placeholder="Cor"
+           value="@Model.Cor" />
+    <a asp-action="Cadastrar">
+        <input type="button" value="Cadastrar"/>
+    </a>
+</form>
