@@ -1,0 +1,30 @@
+﻿@page
+@model WebApplication1.Pages.Listar_VeiculosModel
+@{
+    ViewData["Title"] = "Lista de Veículos";
+}
+
+<h2>Lista de Veículos</h2>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Placa</th>
+            <th>Carro</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Carros.Keys)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => Model.Carros[item])
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

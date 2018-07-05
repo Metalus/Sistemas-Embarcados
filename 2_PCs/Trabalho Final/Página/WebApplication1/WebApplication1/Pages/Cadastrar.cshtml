@@ -1,0 +1,22 @@
+﻿@page
+@model WebApplication1.Pages.CadastrarPageModel
+@{
+    ViewData["Title"] = "Cadastrar";
+}
+
+<h2>Cadastrar</h2>
+
+<form method="post" class="form-inline">
+    <input name="placa" class="form-control" placeholder="Placa" id="placa" />
+    <input name="cor" class="form-control" placeholder="Cor" id="cor" />
+    <button type="submit" asp-page-handler="Cadastrar">Cadastrar</button>
+    @if (TempData["Message"] != null)
+    {
+        <script type="text/javascript">
+
+            window.onload = function () {
+                alert("@TempData["Message"]");
+            };
+        </script>
+    }
+</form>
